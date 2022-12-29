@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_fragment_popup"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/img_clear"
+        android:src="@drawable/my_clear_two"
+        android:layout_width="@dimen/define_dimen_30"
+        android:layout_height="@dimen/define_dimen_30"
+        android:layout_marginEnd="@dimen/define_dimen_18"
+        android:layout_marginTop="@dimen/define_dimen_45"
+        app:tint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/name_app"
+        android:layout_width="@dimen/define_dimen_200"
+        android:layout_height="@dimen/define_dimen_100"
+        android:src="@drawable/zedge_logo_tm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ic_plus"
+        android:layout_width="@dimen/define_dimen_18"
+        android:layout_height="@dimen/define_dimen_18"
+        android:layout_marginTop="@dimen/define_dimen_2"
+        android:src="@drawable/ic_plush"
+        app:layout_constraintBottom_toBottomOf="@+id/text_clear_ads"
+        app:layout_constraintEnd_toStartOf="@+id/text_clear_ads"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/name_app"
+        app:layout_constraintTop_toTopOf="@+id/text_clear_ads"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/text_clear_ads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clean_ads"
+        android:layout_marginTop="@dimen/define_dimen_14"
+        android:fontFamily="@font/roboto_medium_numbers"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_xxnormal"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_app"
+        app:layout_constraintVertical_bias="0.002" />
+
+    <View
+        android:id="@+id/view_space"
+        android:background="@color/design_dark_default_color_primary"
+        android:layout_height="@dimen/define_dimen_0.8"
+        android:layout_width="300dp"
+        android:layout_marginTop="@dimen/define_dimen_15"
+        app:layout_constraintTop_toBottomOf="@+id/text_clear_ads"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="PrivateResource" />
+
+    <TextView
+        android:id="@+id/choose_plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_your_plan"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_medium_numbers"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_space"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/define_dimen_15"
+        android:id="@+id/layout_three_days"
+        android:orientation="horizontal"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_plan"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginEnd="@dimen/define_dimen_2"
+            app:cardCornerRadius="@dimen/define_dimen_10"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout_month"
+                android:padding="@dimen/define_dimen_3"
+                android:background="@color/bling"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/white"
+                    android:text="@string/three_days_free"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/define_dimen_5"
+                    app:cardCornerRadius="@dimen/define_dimen_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:background="@color/Layer3"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_marginTop="@dimen/define_dimen_5"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_large"
+                            android:gravity="center"
+                            android:text="@string/monthly"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_xsmall"
+                            android:gravity="center"
+                            android:text="@string/price_month"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginStart="@dimen/define_dimen_2"
+            app:cardCornerRadius="@dimen/define_dimen_10"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout_year"
+                android:padding="@dimen/define_dimen_3"
+                android:background="@color/Grey"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/white"
+                    android:text="@string/three_days_free"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/define_dimen_5"
+                    app:cardCornerRadius="@dimen/define_dimen_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+
+                        android:background="@color/Layer3"
+                        android:padding="@dimen/define_dimen_5"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_large"
+                            android:gravity="center"
+                            android:text="@string/yearly"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_xsmall"
+                            android:gravity="center"
+                            android:text="@string/price_year"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+                        <TextView
+                            android:layout_marginTop="@dimen/define_dimen_10"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_xnormal"
+                            android:gravity="center"
+                            android:text="@string/save"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/define_dimen_5"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/start_free_trial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="@dimen/define_dimen_10"
+        android:text="@string/start_free"
+        android:textColor="@color/BaseLayer"
+        android:textSize="@dimen/text_size_xxnormal"
+        android:textStyle="normal"
+        app:backgroundTint="@color/bling"
+        app:cornerRadius="@dimen/define_dimen_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_three_days" />
+
+    <TextView
+       android:id="@+id/term_of_use"
+       android:textSize="@dimen/text_size_xsmall"
+       android:textColor="@color/Grey"
+       android:gravity="center"
+        android:layout_marginBottom="@dimen/define_dimen_5"
+       android:text="@string/subscription"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

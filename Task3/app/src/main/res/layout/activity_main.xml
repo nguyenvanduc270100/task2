@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            tools:context=".MainActivity">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/BaseLayer"
+                android:gravity="center"
+                android:minHeight="?attr/actionBarSize">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_toolbar_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="center"
+                    android:background="@color/BaseLayer"
+                    android:visibility="visible"
+                    app:layout_scrollFlags="scroll">
+
+                    <ImageButton
+                        android:id="@+id/open_menu_left"
+                        android:layout_width="@dimen/define_dimen_50"
+                        android:layout_height="match_parent"
+                        android:background="@color/BaseLayer"
+                        android:src="@drawable/ic_menu"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/text_topic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/define_dimen_5"
+                        android:gravity="center"
+                        android:text="@string/wallpapers"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_xxnormal"
+                        app:layout_constraintStart_toEndOf="@+id/open_menu_left"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/open_search"
+                        android:layout_width="@dimen/define_dimen_50"
+                        android:layout_height="match_parent"
+                        android:background="@color/BaseLayer"
+                        android:src="@drawable/ic_search"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_toolbar_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/BaseLayer"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_scrollFlags="scroll">
+
+                    <ImageButton
+                        android:id="@+id/img_back"
+                        android:layout_width="@dimen/define_dimen_50"
+                        android:layout_height="match_parent"
+                        android:background="@color/BaseLayer"
+                        android:src="@drawable/my_ic_back"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/LightGrey"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/sreach_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/BaseLayer"
+                        android:focusable="true"
+                        app:divider="@color/BaseLayer"
+                        app:iconifiedByDefault="false"
+                        app:queryHint="@string/search"
+                        app:searchIcon="@null"
+                        app:showDividers="middle" />
+                </LinearLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/BaseLayer"
+                    app:tabIndicatorAnimationDuration="500"
+                    app:tabIndicatorColor="@color/white"
+                    app:tabIndicatorHeight="@dimen/define_dimen_2"
+                    app:tabRippleColor="@android:color/transparent"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextColor="@color/LightGrey" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:scrollbars="none"/>
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_gravity="start"
+            android:background="@color/Layer3"
+            app:itemTextColor="@color/black"
+            app:itemIconTint="@color/black"
+            app:headerLayout="@layout/layout_header_navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/layout_popup"
+        layout="@layout/fragment_popup"/>
+</FrameLayout>

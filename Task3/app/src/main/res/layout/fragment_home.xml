@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:background="@color/Layer3"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_nested_home"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginStart="@dimen/define_dimen_8"
+            android:layout_marginTop="@dimen/define_dimen_14"
+            android:fontFamily="@font/roboto_medium_numbers"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="@string/featured"
+            android:textSize="@dimen/text_size_xnormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_home_featured"
+            android:layout_marginTop="@dimen/define_dimen_14"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="@dimen/define_dimen_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginStart="@dimen/define_dimen_8"
+                android:fontFamily="@font/roboto_medium_numbers"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="@string/popular_collections"
+                android:textSize="@dimen/text_size_xnormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium_numbers"
+                android:layout_marginEnd="@dimen/define_dimen_30"
+                android:text="@string/see_more"
+                android:textColor="@color/purple"
+                android:textStyle="normal"
+                android:textSize="@dimen/text_size_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_home_collections"
+            android:layout_marginTop="@dimen/define_dimen_14"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginStart="@dimen/define_dimen_8"
+            android:layout_marginTop="@dimen/define_dimen_14"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_medium_numbers"
+            android:text="@string/popular"
+            android:textSize="@dimen/text_size_xnormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_home_popular"
+            android:padding="@dimen/define_dimen_3"
+            android:layout_marginTop="@dimen/define_dimen_14"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/wallpapers"
+        android:icon="@drawable/ic_wall_paper"
+        android:title="@string/wall_paper" />
+
+    <item
+        android:id="@+id/video_wallpapers"
+        android:icon="@drawable/ic_wall_paper"
+        android:title="@string/video_wallpapers" />
+
+    <item
+        android:id="@+id/ringstone"
+        android:icon="@drawable/ic_ringtone"
+        android:title="@string/ringtones" />
+
+    <item
+        android:id="@+id/remove_ads"
+        android:icon="@drawable/ic_star"
+        android:title="@string/remove_ads" />
+
+    <item
+        android:id="@+id/upload_content"
+        android:icon="@drawable/ic_upload"
+        android:title="@string/upload_content" />
+
+    <item android:title="@null">
+        <menu>
+            <item
+                android:id="@+id/setting"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/settings" />
+
+            <item
+                android:id="@+id/help"
+                android:icon="@drawable/ic_help"
+                android:title="@string/help" />
+
+            <item
+                android:id="@+id/information"
+                android:icon="@drawable/ic_info"
+                android:title="@string/information" />
+        </menu>
+    </item>
+
+</menu>

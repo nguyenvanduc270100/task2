@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/define_dimen_3"
+    android:layout_marginEnd="@dimen/define_dimen_3"
+    android:layout_marginTop="@dimen/define_dimen_5"
+    android:padding="@dimen/define_dimen_0.8"
+    android:background="@drawable/bg_border_black">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/define_dimen_20">
+        <ImageView
+            android:id="@+id/img_categories_ideas"
+            android:src="@drawable/girl_one"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/define_dimen_100"
+            android:contentDescription="@string/popular" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

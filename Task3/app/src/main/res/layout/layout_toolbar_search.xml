@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:viewBindingIgnore="true"
+    android:background="@color/search_tags_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/img_back"
+        android:src="@drawable/my_ic_back"
+        android:layout_width="@dimen/define_dimen_50"
+        android:layout_height="@dimen/define_dimen_50"
+        android:background="@color/Grey"
+        app:tint="@color/LightGrey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sreach_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/define_dimen_50"
+        android:background="@color/Grey"
+        android:focusable="true"
+        app:divider="@color/white"
+        app:iconifiedByDefault="false"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="@string/search"
+        app:searchIcon="@null"
+        app:showDividers="middle" />
+
+</LinearLayout>
