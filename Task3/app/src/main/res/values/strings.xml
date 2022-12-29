@@ -33,5 +33,6 @@
     <string name="help">Help</string>
     <string name="information">Information</string>
     <string name="log_in">LOG IN</string>
+    <string name="hinh_anh">Image</string>
 
 </resources>

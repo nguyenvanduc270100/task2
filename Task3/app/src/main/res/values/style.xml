@@ -1,30 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="TutorialText">
-        <item name="android:textSize">@dimen/text_size_normal</item>
-        <item name="android:textColor">#ffffff</item>
-        <item name="android:paddingLeft">15dp</item>
-        <item name="android:paddingRight">15dp</item>
 
-    </style>
-    <style name="TutorialText.Title">
-        <item name="android:textSize">@dimen/text_size_normal</item>
-        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
-        <item name="android:layout_gravity">left|center_horizontal|clip_horizontal</item>
-        <item name="android:paddingTop">0dp</item>
-        <item name="android:paddingBottom">15dp</item>
-    </style>
-    <style name="TutorialText.Paragraph">
-        <item name="android:paddingTop">10dp</item>
-        <item name="android:paddingBottom">10dp</item>
-    </style>
     <style name="TutorialImage">
-        <item name="android:paddingLeft">15dp</item>
-        <item name="android:paddingRight">15dp</item>
+        <item name="android:textSize">@dimen/text_size_xnormal</item>
+        <item name="android:textColor">@color/error_color_material_light</item>
+        <item name="android:paddingLeft">@dimen/define_dimen_18</item>
+        <item name="android:paddingBottom">@dimen/define_dimen_12</item>
+        <item name="android:textStyle">bold</item>
     </style>
     <style name="Text_Title_All">
-        <item name="android:textSize">@dimen/text_size_normal</item>
-        <item name="android:textColor">@color/teal_200</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_xnormal</item>
+        <item name="android:textColor">@color/error_color_material_light</item>
     </style>
 
     <style name="text_navi">
